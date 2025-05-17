@@ -1,8 +1,9 @@
 import sys
 import requests
+import PyQt5
 from PyQt5.QtWidgets import (QApplication, QWidget, QLabel, QLineEdit, QPushButton, QVBoxLayout)
 from PyQt5.QtCore import Qt
-
+from PyQt5 import QtGui
 class WeatherWatcher(QWidget):
     def __init__(self):
         super().__init__()
@@ -21,6 +22,8 @@ class WeatherWatcher(QWidget):
         ##################################################################################################################
 
         self.setWindowTitle("Weather Watcher")
+        self.setFixedWidth(800)
+        self.setWindowIcon(QtGui.QIcon('TestIcon.png'))
         vbox = QVBoxLayout()
         vbox.addWidget(self.titleLabel)
         vbox.addWidget(self.locationLabel)
