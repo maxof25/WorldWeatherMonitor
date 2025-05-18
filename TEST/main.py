@@ -4,6 +4,7 @@ import PyQt5
 from PyQt5.QtWidgets import (QApplication, QWidget, QLabel, QLineEdit, QPushButton, QVBoxLayout)
 from PyQt5.QtCore import Qt
 from PyQt5 import QtGui
+#import matplotlib.pyplot as plt
 class WeatherWatcher(QWidget):
     def __init__(self):
         super().__init__()
@@ -159,6 +160,7 @@ class WeatherWatcher(QWidget):
 
 
     def displayWeather(self, data):
+        print(data)
         temperatureKelvin = data["main"]["temp"]
         fullLocation = data["sys"]["country"]
         temperatureCelcius = temperatureKelvin-273.15
