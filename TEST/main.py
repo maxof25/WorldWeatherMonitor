@@ -17,6 +17,7 @@ class WeatherWatcher(QWidget):
         self.imageLabel = QLabel(self)
         self.descriptionLabel=QLabel(self)
         self.initUI()
+        print("GUI has been initialised")
         
     def initUI(self):
         
